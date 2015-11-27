@@ -1,6 +1,6 @@
-# hubot-hubot-promote
+# hubot-promote
 
-Release the CEO from promoting employees
+Releases the CEO from promoting employees
 
 See [`src/hubot-promote.coffee`](src/hubot-promote.coffee) for full documentation.
 
@@ -8,19 +8,19 @@ See [`src/hubot-promote.coffee`](src/hubot-promote.coffee) for full documentatio
 
 In hubot project repo, run:
 
-`npm install hubot-hubot-promote --save`
+`npm install hubot-promote --save`
 
-Then add **hubot-hubot-promote** to your `external-scripts.json`:
+Then add **hubot-promote** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-hubot-promote"
+  "hubot-promote"
 ]
 ```
 
-## Sample Interaction
+## Commands
 
 ```
-user1>> hubot hello
-hubot>> hello!
+jason>> hubot promote miguelangel
+hubot>> I am really excited to announce that miguelangel has been promoted to Lead Guru of Encapsulated Logic Enhancement. miguelangel has helped to appropriately optimize alternative technology. Please join me in congratulating miguelangel on the news!🎊 🎉
 ```

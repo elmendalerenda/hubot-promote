@@ -1,11 +1,11 @@
 {
   "name": "hubot-promote",
   "description": "Release the CEO from promoting employees",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Miguel Angel Fernandez <elmendalerenda@gmail.com>",
   "license": "MIT",
 
-  "keywords": "hubot, hubot-scripts",
+  "keywords": "hubot, hubot-scripts promote bullshit title",
 
   "repository": {
     "type": "git",

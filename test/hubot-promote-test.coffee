@@ -12,25 +12,20 @@ describe 'hubot-promote', ->
 
   beforeEach ->
     room = helper.createRoom()
-    @robot =
-      respond: sinon.spy()
-
-    require('../src/hubot-promote')(@robot)
-
-  afterEach ->
-    # Tear it down after the test to free up the listener.
-    room.destroy()
-
-  it 'registers a respond listener for promoting a user', ->
-    expect(@robot.respond).to.have.been.calledWith(/promote ([^:]+):?/i)
-
-  it 'responds promoting a user', ->
     sinon.stub room.robot.brain, "usersForFuzzyName" , () ->
       return [{ name: 'tom' }]
+    sinon.stub room.robot, "random_bullshit_title" , () ->
+      return 'bullshit title'
+    sinon.stub room.robot, "random_bullshit_activity" , () ->
+      return 'bullshit activity'
 
     room.user.say 'alice', 'hubot promote tom'
 
+  afterEach ->
+    room.destroy()
+
+  it 'responds promoting a user', ->
     expect(room.messages).to.eql [
-            ['alice', 'hubot promote alice'],
-            ['hubot', 'PONG']
+      ['alice', 'hubot promote tom'],
+      ['hubot', 'I am really excited to announce that tom has been promoted to bullshit title. tom has helped to bullshit activity. Please join me in congratulating tom on the news! 🎊 🎉']
     ]

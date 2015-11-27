@@ -1,5 +1,5 @@
 {
-  "name": "hubot-hubot-promote",
+  "name": "hubot-promote",
   "description": "Release the CEO from promoting employees",
   "version": "0.0.0",
   "author": "Miguel Angel Fernandez <elmendalerenda@gmail.com>",

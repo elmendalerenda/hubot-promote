@@ -24,3 +24,5 @@ Then add **hubot-promote** to your `external-scripts.json`:
 jason>> hubot promote miguelangel
 hubot>> I am really excited to announce that miguelangel has been promoted to Lead Guru of Encapsulated Logic Enhancement. miguelangel has helped to appropriately optimize alternative technology. Please join me in congratulating miguelangel on the news!🎊 🎉
 ```
+
+[![Build Status](https://travis-ci.org/elmendalerenda/hubot-promote.svg?branch=master)](https://travis-ci.org/elmendalerenda/hubot-promote)

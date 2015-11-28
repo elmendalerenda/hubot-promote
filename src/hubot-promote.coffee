@@ -3,21 +3,37 @@
 #
 # Commands:
 # hubot promote <username> - assigns the username to a very important title
+# hubot demote <username> - demotes the username from a bullshit title
 
 module.exports = (robot) ->
   robot.respond /promote ([^:]+):?/i, (res) ->
     name = res.match[1].trim()
     user = findUser name
+    message = "I am really excited to announce that #{user.name} has been promoted to #{robot.random_bullshit_title(res)}. #{user.name} has helped to #{robot.random_bullshit_activity(res)}. Please join me in congratulating #{user.name} on the news! 🎊 🎉"
 
+    say('promoted', message, res, user)
+
+  robot.respond /demote ([^:]+):?/i, (res) ->
+    name = res.match[1].trim()
+    user = findUser name
+    message = "The management has decided to demote #{user.name} from #{robot.random_bullshit_title(res)} in accordance with the company policies. This action is being taken as a result of a failure to #{robot.random_bullshit_activity(res)}."
+
+    say('demoted', message, res, user)
+
+  say = (action, message, res, user) ->
     if typeof user is 'object'
       if user.name == robot.name
-        res.send "I'm too good to be promoted!"
+        tooGood('demoted')
       else
-        res.send "I am really excited to announce that #{user.name} has been promoted to #{robot.random_bullshit_title(res)}. #{user.name} has helped to #{robot.random_bullshit_activity(res)}. Please join me in congratulating #{user.name} on the news! 🎊 🎉"
+        res.send message
     else if typeof user.length > 1
       res.send "I found #{user.length} people named #{name}"
     else
       res.send "I don't know anything about #{name}"
+
+
+  tooGood = (action) ->
+    res.send "I'm too good to be #{action}!"
 
   findUser = (name) ->
     users = robot.brain.usersForFuzzyName name

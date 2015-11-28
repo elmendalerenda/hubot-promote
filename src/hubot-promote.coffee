@@ -1,18 +1,8 @@
 # Description
 #   Release the CEO from promoting employees
 #
-# Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
-#
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
-#
-# Notes:
-#   <optional notes required for the script>
-#
-# Author:
-#   Miguel Angel Fernandez <elmendalerenda@gmail.com>
+# hubot promote <username> - assigns the username to a very important title
 
 module.exports = (robot) ->
   robot.respond /promote ([^:]+):?/i, (res) ->

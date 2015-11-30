@@ -1,28 +1,21 @@
 {
   "name": "hubot-promote",
   "description": "Release the CEO from promoting employees",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Miguel Angel Fernandez <elmendalerenda@gmail.com>",
   "license": "MIT",
-
   "keywords": "hubot, hubot-scripts, promote, bullshit, title",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elmendalerenda/hubot-promote.git"
   },
-
   "bugs": {
     "url": "https://github.com/elmendalerenda/hubot-promote/issues"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "1.6.3",
@@ -38,12 +31,9 @@
     "sinon-chai": "^2.7.0",
     "hubot-test-helper": "1.2.0"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   },
-
   "homepage": "https://github.com/elmendalerenda/hubot-promote#readme"
 }

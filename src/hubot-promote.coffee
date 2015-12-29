@@ -58,5 +58,5 @@ module.exports = (robot) ->
     three = ['Organic', 'Scalable', 'Robust', 'Encapsulated', 'Intelligent', 'Strategic', 'Dynamic', 'Mission-Critical', 'N-Tier', 'Creative', 'Targetted', 'Vertical', 'Collaborative', 'Dynamic', 'Enterprise', 'Real-Time', 'Proactive', 'Revolutionary', 'Synergistic', 'Viral', 'Virtual', 'Turn-Key', 'Extensible', 'Convergent', 'Enmeshed', 'B2C2B']
     four = ['E-Commerce', 'M-Commerce', 'Wireless', 'Brand', 'E-Business', 'Portal', 'Value', 'Network', 'Component', 'Media', 'Content', 'Logic', 'Experience', 'Interaction', 'B2B', 'B2C', 'P2P', 'End-to-End', 'End-User', 'Front End', 'Back End']
     five = ['Solutions', 'Processes', 'Planning', 'Conception', 'Analysis', 'Development', 'Marketing', 'Evolution', 'Operations', 'Engagement', 'Therapy', 'Propaganda', 'Deployment', 'Enhancement', 'Implementation', 'Cultivation', 'Empowerment', 'Innovation', 'Optimization', 'Applications', 'Partnerships', 'Investments', 'Paradigms', 'Infrastructures', 'Positioning', 'Intelligence']
-    return "#{res.random(one)} of #{res.random(two)} #{res.random(three)} #{res.random(four)}"
+    return "#{res.random(one)} #{res.random(two)} of #{res.random(three)} #{res.random(four)}"
 
